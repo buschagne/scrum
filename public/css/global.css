@@ -1,0 +1,438 @@
+/* 
+    Document   : global
+    Created on : Aug 30, 2012, 10:09:56 AM
+    Author     : user
+    Description:
+        Purpose of the stylesheet follows.
+*/
+
+
+.personnalInfo .nav a {
+    color:#000;
+
+}
+
+.personnalInfo .nav .active a{
+    color:#08C;
+    font-size:16px;
+}
+
+
+td.actions{
+    width:50px;
+}
+
+.tdLink {
+    width:100%;
+    height:100%;
+
+}
+.center {
+    text-align:center;
+}
+.tdLink a {
+    color : #f5f5f4;
+    width:100%;
+    height:100%;
+    display:block;
+}
+.tdLink a:hover {
+    text-decoration: none;
+}
+input{
+/*    height:18px;*/
+}
+
+body{
+    padding-top:50px;
+    background-color:#efefef;
+
+}
+
+.container-fluid.main{
+    background-color:#FFF;
+    margin:0 50px 40px 50px;
+
+    padding:20px;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+}
+
+#copyright {
+    bottom:0;
+    position:fixed;
+    width:100%;
+    height:30px;
+    background-color:black;
+    color :  #f1f1f0;
+    text-indent:60px;
+    padding-top: 10px;
+}
+
+.breadcrumb{
+    border:0;
+    background:none;
+    margin-bottom:10px;
+    margin-left:10px;
+    margin-top:10px;
+}
+
+.sheet {
+
+}
+.sheet dl, .sheet dt, .sheet dd {
+    text-decoration: none;
+    text-align: left;
+    padding:0;
+    margin:5px;
+}
+.sheet dt {
+    clear:both;
+    font-size: 12px;
+    float : left;
+    text-align: right;
+    padding : 0 25px 0 0;
+    width: 200px;
+    font-weight: normal;
+
+    color:  #6c6c6c;
+
+}
+
+.sheet dd {
+    font-size: 12px;
+    float : left;
+
+}
+.sheet .sheetform {
+    background-color: #e7f2ff;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+}
+.calendar td {
+    width:100px;
+    height:100px;
+    padding:0;
+}
+
+.calendar .normal {
+    background-color:white;
+}
+.calendar .notinmonth {
+    background-color:#daeffe;
+}
+.calendar .public-holiday {
+    background-color:#fff7e2;
+}
+.calendar .absence {
+    background-color:#ffe8e8;
+}
+.calendar td .title{
+    font-size: 14px;
+    font-weight: bold;
+    display:block;
+
+    border-bottom: 1px solid #dbdcdd;
+    height:20px;
+    background-color:#daeffe;
+
+}
+.calendar td .content{
+    font-size: 10px;
+
+}
+
+
+
+.no-close .ui-dialog-titlebar-close {display: none }
+/* css for timepicker */
+.ui-timepicker-div .ui-widget-header { margin-bottom: 8px; }
+.ui-timepicker-div dl { text-align: left; }
+.ui-timepicker-div dl dt { height: 25px; margin-bottom: -25px; }
+.ui-timepicker-div dl dd { margin: 0 10px 10px 65px; }
+.ui-timepicker-div td { font-size: 90%; }
+.ui-tpicker-grid-label { background: none; border: none; margin: 0; padding: 0; }
+
+
+.vMenu{
+    border:1px solid #aaa;
+    position:absolute;
+    background:#fff;
+    display:none;
+    box-shadow: 0 3px 3px rgba(0, 0, 0, 0.50);
+}
+.vMenu a{
+    color:#333;
+    text-decoration: none;
+}
+.vMenu>ul{margin:0;}
+.vMenu>ul>li>a{
+    display:block;
+    width:100px;
+    padding:0 5px;
+}
+.vMenu>ul>li>ul>li a{
+    display: block;
+    padding: 0 5px;
+}
+.vMenu>ul>li>ul>li a:hover{
+    background-color:#ddd;
+}
+.vMenu>ul>li>ul>li a span{
+    float: right;
+}
+.vMenu>ul>li ul{
+    width: 250px;
+    display:none;
+    margin-left:100px;
+    position:absolute;
+    border:1px solid #aaa;
+    border-left:1px solid #ccc;
+    margin-top:-19px;
+    background:#fff;
+    box-shadow: 0 3px 3px rgba(0, 0, 0, 0.50);
+}
+.vMenu li{
+    list-style: none;
+    clear: both;
+}
+
+
+
+.vMenuDelete{
+    border:1px solid #aaa;
+    position:absolute;
+    background:#fff;
+    display:none;
+    box-shadow: 0 3px 3px rgba(0, 0, 0, 0.50);
+}
+.vMenuDelete a{
+    color:#333;
+    text-decoration: none;
+}
+.vMenuDelete>ul{margin:0;}
+.vMenuDelete>ul>li>a{
+    display:block;
+    width:100px;
+    padding:0 5px;
+}
+.vMenuDelete>ul>li>ul>li a{
+    display: block;
+    padding: 0 5px;
+}
+.vMenuDelete>ul>li>ul>li a:hover{
+    background-color:#ddd;
+}
+.vMenuDelete>ul>li>ul>li a span{
+    float: right;
+}
+.vMenuDelete>ul>li ul{
+    width: 200px;
+    display:none;
+    margin-left:100px;
+    position:absolute;
+    border:1px solid #aaa;
+    border-left:1px solid #ccc;
+    margin-top:-19px;
+    background:#fff;
+    box-shadow: 0 3px 3px rgba(0, 0, 0, 0.50);
+}
+.vMenuDelete li{
+    list-style: none;
+    clear: both;
+}
+
+
+
+
+table.planning thead td{
+    width:8px;
+    text-align: center;
+    font-size: 9px;
+    border-bottom: dashed 1px;
+}
+
+table.planning tbody td>div{
+    position: absolute;
+    border: solid 1px white;
+    border-radius: 2px;
+    box-shadow: 0 3px 3px rgba(0, 0, 0, 0.50);
+    height: 15px;
+}table.planning tbody div:hover{z-index:5000;}
+
+table.planning tbody tr td{
+    border-bottom: dotted 1px #999;
+    padding-top: 5px;
+    vertical-align: top;
+}
+
+table.planning tbody tr.active td{
+    background-color: #ddd;
+}
+
+table.planning tbody tr th{
+    width: 150px;
+    height: 40px;
+    border-bottom: solid 1px #999;
+}
+
+table.tasktable tbody th{
+    width:300px;
+}
+
+table.tasktable tbody td{
+    width:auto;
+    height:50px;
+}
+
+table.tasktable tbody tr.nettoyage div{
+    background-color: red;
+}table.tasktable tbody tr.nettoyage div i{
+    cursor: move;
+}
+
+table.planning tbody td>div,
+table.tasktable tbody td div{
+    float:left;
+    border: solid 1px white;
+    border-radius: 2px;
+    box-shadow: 0 3px 3px rgba(0, 0, 0, 0.50);
+    height: 25px;
+    margin: -1px;
+    padding:3px 0 0 3px;
+    line-height:0.9em;
+    font-size: 11px;
+    color:white;
+}
+
+table.planning tbody td>div.bigger-right{
+    
+    border-right-width: 0px ;    
+}
+table.planning tbody td>div.bigger-left{
+    
+    border-left-width: 0px ;    
+}
+
+.ui-draggable{
+    min-width: 260px;
+    margin:2px!important;
+}
+
+
+
+/* VMENU FOR MASK PLANNING */
+.vMenuMask{
+    border:1px solid #aaa;
+    position:absolute;
+    background:#fff;
+    display:none;
+    box-shadow: 0 3px 3px rgba(0, 0, 0, 0.50);
+}
+.vMenuMask a{
+    color:#333;
+    text-decoration: none;
+}
+.vMenuMask>ul{margin:0;}
+.vMenuMask>ul>li>a{
+    display:block;
+    width:100px;
+    padding:0 5px;
+}
+.vMenuMask>ul>li>ul>li a{
+    display: block;
+    padding: 0 5px;
+}
+.vMenuMask>ul>li>ul>li a:hover{
+    background-color:#ddd;
+}
+.vMenuMask>ul>li>ul>li a span{
+    float: right;
+}
+.vMenuMask>ul>li ul{
+    width: 200px;
+    display:none;
+    margin-left:100px;
+    position:absolute;
+    border:1px solid #aaa;
+    border-left:1px solid #ccc;
+    margin-top:-19px;
+    background:#fff;
+    box-shadow: 0 3px 3px rgba(0, 0, 0, 0.50);
+}
+.vMenuMask li{
+    list-style: none;
+    clear: both;
+}
+
+
+
+.vMenuMaskDelete{
+    border:1px solid #aaa;
+    position:absolute;
+    background:#fff;
+    display:none;
+    box-shadow: 0 3px 3px rgba(0, 0, 0, 0.50);
+}
+.vMenuMaskDelete a{
+    color:#333;
+    text-decoration: none;
+}
+.vMenuMaskDelete>ul{margin:0;}
+.vMenuMaskDelete>ul>li>a{
+    display:block;
+    width:100px;
+    padding:0 5px;
+}
+.vMenuMaskDelete>ul>li>ul>li a{
+    display: block;
+    padding: 0 5px;
+}
+.vMenuMaskDelete>ul>li>ul>li a:hover{
+    background-color:#ddd;
+}
+.vMenuMaskDelete>ul>li>ul>li a span{
+    float: right;
+}
+.vMenuMaskDelete>ul>li ul{
+    width: 200px;
+    display:none;
+    margin-left:100px;
+    position:absolute;
+    border:1px solid #aaa;
+    border-left:1px solid #ccc;
+    margin-top:-19px;
+    background:#fff;
+    box-shadow: 0 3px 3px rgba(0, 0, 0, 0.50);
+}
+.vMenuMaskDelete li{
+    list-style: none;
+    clear: both;
+}
+
+
+
+
+/* printing  */
+.updateclock{
+    opacity:0;
+}
+
+
+
+/*
+    COLOR BREAKS
+*/
+div.break{
+    background-image: url('images/breaks_stripes.png');
+    
+}
+div.breakText{
+    color:#000;
+    background-color: #fff;
+    padding:1px;
+    width:29px;
+    margin:7px auto;
+}

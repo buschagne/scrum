@@ -1,0 +1,40 @@
+#form-update-adress-numero{
+    width:170px;
+    float:left;
+    position:relative;
+    z-index:10;
+}
+#form-update-adress-box{
+    width:170px;
+    float:left;
+}
+#form-update-adress #numero, #form-update-adress #post_code, #form-add-staff #numero, #form-add-staff #post_code{
+    width:80px;
+}
+#form-update-adress #box, #form-add-staff #box{
+    width:40px;
+}
+#form-update-adress #box-label{
+    float:left;
+}
+
+
+
+
+#form-contract-add-max_day_hours{
+    width:170px;
+    float:left;
+    position:relative;
+    z-index:1;
+}
+#form-contract-add-week_hours{
+    width:auto;
+    float:left;
+}
+
+#form-contract-add-max_day_hours #max_day_hours{
+    width:40px;
+}
+#form-contract-add-week_hours #week_hours{
+    width:40px;
+}

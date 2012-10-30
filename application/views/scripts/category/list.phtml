@@ -1,0 +1,11 @@
+<h2><?= $this->page->title;?></h2>
+<?php //Zend_Debug::dump($this->data);?>
+<table class="table table-condensed">
+<?php
+
+foreach ($this->data as $key => $val){
+  echo '<tr><th><a href="'.$this->baseUrl().'/category/update/id_category/'.$val['id_category'].'"><i class="icon-wrench"></i></a></th><th>'.$val['label'].'</th><th><a href="'.$this->baseUrl().'/category/delete/id_category/'.$val['id_category'].'"><i class="icon-remove"></i></a></th></tr>';
+}
+;?>
+</table>
+<a href="<?= $this->baseUrl();?>/category/add">Add</a>

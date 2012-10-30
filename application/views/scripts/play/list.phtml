@@ -1,0 +1,108 @@
+<h2><?= $this->page->title; ?></h2>
+<?php 
+//Zend_Debug::dump($this->selected_scrum);
+?>
+
+
+<div>
+  <span style="background-color:gainsboro;">&nbsp;Not Started</span>&nbsp;
+  <span style="background-color:#D2E0E6;">&nbsp;Started</span>&nbsp;
+  <span style="background-color:lightsalmon;">&nbsp;Delayed</span>&nbsp;
+  <span style="background-color: lightcoral;">&nbsp;Problem</span>&nbsp;
+  <span style="background-color:lightgreen;">&nbsp;Completed</span>&nbsp;
+  <span style="background-color:greenyellow;">&nbsp;Anything else</span>&nbsp;
+  <br/>  
+</div>
+<table  id="datatable" class="table table-condensed table-bordered">
+  <thead>
+    <?php
+    foreach ($this->data as $key) {
+      foreach ($key as $k => $v) {
+        $heading[$k] = $k;
+      }
+    }
+    ;
+    ?>
+  </thead>
+  <tbody>
+
+    <?php
+    echo '<tr><th>' . $this->translate("id_play") . '</th>
+    <th>' . $this->translate("fk_id_scrum_item") . '</th>
+    <th>' . $this->translate("label") . '</th>
+    <th>' . $this->translate("started_on") . '</th>
+    <th>' . $this->translate("stopped_on") . '</th>
+    <th>' . $this->translate("stop_reason") . '</th>
+    <th>' . $this->translate("estimate_duration") . '</th>
+    <th>' . $this->translate("estimate_finish") . '</th>
+    <th>' . $this->translate("deadline") . '</th>
+    <th>' . $this->translate("finished_on") . '</th>
+    <th>' . $this->translate("result") . '</th>
+    <th>' . $this->translate("result_comment") . '</th>
+    <th>' . $this->translate("fk_id_category") . '</th>
+    <th>' . $this->translate("fk_id_player") . '</th>
+    <th>' . $this->translate("fk_id_team") . '</th>
+    <th></th></tr>';
+
+    
+    
+    
+    foreach ($this->data as $key => $val) {
+ 
+      if($val['fk_id_scrum_item'] == $this->selected_scrum || $this->selected_scrum == null){
+      
+      
+      if($val['started_on']== '0000-00-00 00:00:00'){
+      
+        echo '<tr style="background-color:gainsboro;">';
+      }else{
+        echo '<tr style="background-color:#D2E0E6;">';
+      }
+      
+      if($val['stopped_on']== '0000-00-00 00:00:00'){
+      }else{
+        echo '<tr style="background-color:lightsalmon;">';
+      }
+      
+      if($val['finished_on']== '0000-00-00 00:00:00'){
+      }else{
+        echo '<tr style="background-color:lightgreen;">';
+      }
+      
+      
+      ;?>
+    
+      
+        <td><a href="<?= $this->baseUrl();?>/play/update/id_play/<?= $val['id_play'];?>"><i class="icon-wrench"></i></a></td>
+        <td><a href="<?= $this->baseUrl();?>/play/list/selected_scrum/<?= $val['fk_id_scrum_item'];?>"><?= $val['ScrumItem']['label'];?></a></td>
+        <td><?= $val['label'];?></td>
+        <td><?= $val['started_on'];?></td>
+        <td><?= $val['stopped_on'];?></td>
+        <td><?= $val['stop_reason'];?></td>
+        <td><?= $val['estimate_duration'];?></td>
+        <td><?= $val['estimate_finish'];?></td>
+        <td><?= $val['deadline'];?></td>
+        <td><?= $val['finished_on'];?></td>
+        <td><?= $val['result'];?></td>
+        <td><?= $val['result_comment'];?></td>
+        <td><?= $val['Category']['label'];?></td>
+        <td><?= $val['Player']['name'];?></td>
+        <td><?= $val['Team']['label'];?></td>
+        <td><a href="<?= $this->baseUrl();?>/play/delete/id_play/<?= $val['id_play'];?>"><i class="icon-remove"></i></a></td>
+      </tr>
+<?php 
+      }
+      
+      }
+
+
+    ;
+    ?>
+  </tbody>
+  <tfoot>
+    <tr>
+      <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+    </tr>
+  </tfoot>
+</table>
+<a href="<?= $this->baseUrl(); ?>/play/add">Add</a>

@@ -1,0 +1,112 @@
+<?php echo $this->doctype() . "\n"; ?>
+<html>
+    <head>
+        <link href="<?= $this->baseUrl() ?>/css/main.css" rel="stylesheet">
+        <link href="<?= $this->baseUrl() ?>/css/global.css" rel="stylesheet">
+        <link href="<?= $this->baseUrl() ?>/css/jquery-ui-1.8.18.custom.css" rel="stylesheet">
+        <link href="<?= $this->baseUrl() ?>/twitter-bootstrap/bootstrap.css" rel="stylesheet">
+        <link href="<?= $this->baseUrl() ?>/css/flexigrid.pack.css" rel="stylesheet">
+        <link href="<?= $this->baseUrl() ?>/js/jquery.fancybox.css?v=2.1.0" media="screen" rel="stylesheet" type="text/css" />
+        <link href="<?= $this->baseUrl() ?>/css/forms-styling.css" rel="stylesheet">
+
+        <script type="text/javascript" src="<?= $this->baseUrl() ?>/js/jquery.min.js"></script>
+        <script type="text/javascript" src="<?= $this->baseUrl() ?>/js/jquery-ui-1.8.18.custom.min.js"></script>
+        
+        <?php $this->headScript()->appendFile($this->baseUrl() . "/js/jquery.fancybox.js?v=2.1.0"); ?>
+        <?php $this->headScript()->appendFile($this->baseUrl() . "/js/jquery.rightClick.js"); ?>
+        <?php $this->headScript()->appendFile($this->baseUrl() . "/twitter-bootstrap/js/bootstrap-tab.js"); ?>
+        <?php $this->headScript()->appendFile($this->baseUrl() . "/js/livequery.js"); ?>
+        <?php $this->headScript()->appendFile($this->baseUrl() . "/js/jquery.datatable.js"); ?>
+        <?php $this->headScript()->appendFile($this->baseUrl() . "/js/jquery.dataTables.columnFilter.js"); ?>
+        <?php $this->headScript()->appendFile($this->baseUrl() . "/js/general.js"); ?>
+        <?php $this->headScript()->appendFile($this->baseUrl() . "/js/jquery-ui-timepicker-addon.js"); ?>
+        
+        
+        <?php echo $this->headTitle(); ?>
+        <?php echo $this->headMeta(); ?>
+        <?php echo $this->headLink(); ?>
+        <?php echo $this->headStyle(); ?>
+        <?php echo $this->headScript(); ?>
+
+    </head>
+    <body>
+        <div class="brand-zone">
+            <div class="logo"><img src="<?= $this->baseUrl();?>/images/bewan/logo.png">
+            <div class="intranet">bewanScrum</div></div>
+        </div>
+
+        <div class="navbar navbar-fixed-top">
+            <div class="navbar-inner">
+                <div class="container row-fluid">
+                    <ul class="nav pull-right">
+                        <li class="dropdown user-profile">
+                            <a class="dropdown-toggle user-name" data-toggle="dropdown">
+                                <span class="user-name"></span><br/><br/>
+                            </a>
+                        </li>
+                        
+                        <li class="user-action"><a href="<?= $this->baseUrl();?>/login/index/logout"><img src="<?= $this->baseUrl()?>/img/off_small.png"></a></li>
+                        
+                    </ul>
+                </div>
+            </div>
+            <div class="navbar-bottom row-fluid">
+                <div class="span2"></div>
+                <ul class="navbar-breadcrumb span10">
+                    <div style="float:left">
+                        <?php
+                        
+                           echo $this->navigation()->breadcrumbs();
+                        
+                        ?>
+                    </div>
+                    <div style="float:right;padding-right:50px;">
+                        <?php echo date('d-m-Y') . ' &nbsp; ' . date('h:i'); ?> </div>
+                    <div style="clear:both"></div>
+                </ul>
+            </div>
+        </div>
+
+
+
+
+        <div class="container-fluid">
+            <div class="row-fluid">
+
+                <!-- MENU -->
+                <div class="span2">
+                    <div class="sidebar-menu">
+                        <?php
+                        
+                            echo $this->navigation();
+                        
+                        ?>
+                    </div>
+                </div>
+                <!-- END MENU -->
+
+                <!-- CONTENT -->
+                <div class="span10 main-container row">
+                    <div class="span12 panel well row">
+
+
+                            <?php
+                            
+                                $this->layout()->setLayout('default');
+                                echo $this->layout()->render();
+                            ?>
+
+
+                    </div>
+
+                </div>
+
+                <!-- END CONTENT -->
+
+            </div>
+        </div>
+
+        <?php echo $this->inlineScript(); ?>
+
+    </body>
+</html>

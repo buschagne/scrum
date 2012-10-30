@@ -1,0 +1,25 @@
+id_play;ID
+fk_id_scrum_item;Scrum	
+label;Label
+started_on;Started on..
+stopped_on;Delayed on..
+stop_reason;Reason for delay
+estimate_duration;Duration Estimate
+estimate_finish;ETA
+deadline;Deadline
+finished_on;Completed on..
+result;Result
+result_comment;Comments
+fk_id_category;Category
+fk_id_player;Player
+fk_id_team;Team
+
+id_player;ID
+name;Name
+
+id_team:ID
+id_category:ID
+
+description;Description
+created_on;Created on ..
+removed_on;Removed on ..

@@ -1,0 +1,40 @@
+<?xml version="1.0"?>
+<zend-config xmlns:zf="http://framework.zend.com/xml/zend-config-xml/1.0/">
+    <webnav>
+        <scrum>
+            <label>Scrum</label>
+            <controller>scrum</controller>
+            <action>list</action>
+        </scrum>
+        <play>
+            <label>Play!</label>
+            <controller>play</controller>
+            <action>list</action>
+            
+        </play>
+        <configuration>
+            <label>Configuration</label>
+            <controller>player</controller>
+            <action>list</action>
+            <pages>
+                <item1>
+                    <label>List Players</label>
+                    <controller>player</controller>
+                    <action>list</action>
+                </item1>
+                <item2>
+                    <label>List Teams</label>
+                    <controller>team</controller>
+                    <action>list</action>
+                </item2>
+                <item3>
+                    <label>Play Categories</label>
+                    <controller>category</controller>
+                    <action>list</action>
+                </item3>
+
+            </pages>
+            
+        </configuration>
+    </webnav>
+</zend-config>

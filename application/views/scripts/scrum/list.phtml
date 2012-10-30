@@ -1,0 +1,10 @@
+<h2><?= $this->page->title;?></h2>
+
+<table class="table table-condensed  table-bordered">
+<?php 
+foreach ($this->data as $key => $val){
+  echo '<tr><td><a href="'.$this->baseUrl().'/scrum/update/id_scrum_item/'.$val['id_scrum_item'].'"><i class="icon-wrench"></i></a></td><td>'.$val['label'].'</td><td><a href="'.$this->baseUrl().'/scrum/delete/id_scrum_item/'.$val['id_scrum_item'].'"><i class="icon-remove"></i></a></td></tr>';
+}
+;?>
+</table>
+<a href="<?= $this->baseUrl();?>/scrum/add">Add</a>

@@ -1,0 +1,88 @@
+.dataTables_wrapper{
+	.dataTables_length{
+		float:left;
+		label{
+			margin:10px 0 0 10px;
+			select{
+				width:70px;
+			}
+		}
+	}
+	.dataTables_filter{
+		float:right;
+		label{
+			margin:10px 10px 0 0;
+			input{
+				font-size:11px;
+				height:15px;
+				width:150px;
+			}
+		}
+	}
+	
+	.dataTable{
+		clear:both;
+		width:100%;
+		  td{
+			border-right:solid 1px #cacaca;
+			border-bottom:solid 1px #cacaca;
+		  }
+		  td:last-child{
+			border-right:0 none;
+		  }
+		thead{
+			td{
+				border-top:solid 1px #cacaca;
+				padding: 8px 10px;
+				cursor:pointer;
+			}
+			  #gradient > .vertical(darken(@white,5%),darken(@white,10%));
+			  .sorting{
+				background:url("http://datatables.net/release-datatables/media/images/sort_both.png");
+			  }
+			  .sorting_desc{
+			    background:url("http://datatables.net/release-datatables/media/images/sort_asc.png");
+			  }
+			  .sorting_asc{
+			    background:url("http://datatables.net/release-datatables/media/images/sort_desc.png");
+			  }
+			  .sorting,.sorting_desc,.sorting_asc{
+				background-repeat:no-repeat;
+				background-position:95%;
+			  }
+		}
+		  tbody {
+			  td{
+			  padding: 5px 10px;
+			}
+			tr:nth-child(odd) td,
+			tr:nth-child(odd) th {
+			  background-color: @tableBackgroundAccent;
+			}
+			
+			tr:nth-child(odd) td.sorting_1,
+			tr:nth-child(odd) th {
+			  background-color: darken(@tableBackgroundAccent,5%);
+			}
+			
+			tr:nth-child(even) td.sorting_1,
+			tr:nth-child(even) th {
+			  background-color: darken(@white,5%);
+			}
+		  }
+		  tfoot{
+		    input{
+				width:90%;
+			}
+		  }
+	}
+	.dataTables_info{
+//		float:left;
+		padding:10px 0 10px 10px;
+		display:inline-block;
+	}
+	.dataTables_paginate{
+		float:right;
+		padding:10px 10px 10px 0;
+	}
+}
