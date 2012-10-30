@@ -18,6 +18,7 @@ class IndexController extends Zend_Controller_Action
         $scrum->label[] = "...Touch!";
         $scrum->label[] = "...Pause!";
         $scrum->label[] = "...Engage!";
+        
         //Zend_Debug::dump($scrum);//exit;
         $this->view->scrumurl = $scrum;
     }
