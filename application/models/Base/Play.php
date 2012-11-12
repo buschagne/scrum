@@ -84,7 +84,7 @@ abstract class Base_Play extends Doctrine_Record
              'fixed' => false,
              'unsigned' => false,
              'primary' => false,
-             'notnull' => false,
+             'notnull' => true,
              'autoincrement' => false,
              ));
         $this->hasColumn('estimate_duration', 'float', null, array(
@@ -92,7 +92,7 @@ abstract class Base_Play extends Doctrine_Record
              'fixed' => false,
              'unsigned' => false,
              'primary' => false,
-             'notnull' => false,
+             'notnull' => true,
              'autoincrement' => false,
              ));
         $this->hasColumn('estimate_finish', 'timestamp', null, array(
@@ -125,7 +125,7 @@ abstract class Base_Play extends Doctrine_Record
              'fixed' => false,
              'unsigned' => false,
              'primary' => false,
-             'notnull' => false,
+             'notnull' => true,
              'autoincrement' => false,
              ));
         $this->hasColumn('result_comment', 'string', null, array(
@@ -133,7 +133,7 @@ abstract class Base_Play extends Doctrine_Record
              'fixed' => false,
              'unsigned' => false,
              'primary' => false,
-             'notnull' => false,
+             'notnull' => true,
              'autoincrement' => false,
              ));
         $this->hasColumn('fk_id_category', 'integer', 4, array(

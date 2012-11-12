@@ -110,8 +110,8 @@ class Application_Form_Play extends Zend_Form
         $stop_reason=new Zend_Form_Element_Textarea("stop_reason");
         $stop_reason->setLabel("stop_reason");
         //$stop_reason->setRequired();
-        $stop_reason->setValue('Answer this: Why did progress stop? eg. Further analysis required? Pending a decision? ');
-        $stop_reason->setAttrib('rows', '10');
+        //$stop_reason->setValue('Answer this: Why did progress stop? eg. Further analysis required? Pending a decision? ');
+        
         $stop_reason->addValidators(array(
         	//new Zend_Validate_StringLength(array("max"=>"20"))
         ));
@@ -189,9 +189,10 @@ class Application_Form_Play extends Zend_Form
         $result=new Zend_Form_Element_Select("result");
         $result->setLabel("result");
         //$result->setRequired();
-        //$result->setValue('Y/N');
+        
         $result->addMultiOption("1", "Yes");
         $result->addMultiOption("0", "No");
+        $result->setValue('0');
         $result->addValidators(array(
         	//new Zend_Validate_StringLength(array("max"=>"20"))
         ));
@@ -205,7 +206,7 @@ class Application_Form_Play extends Zend_Form
         
         $result_comment=new Zend_Form_Element_Textarea("result_comment");
         $result_comment->setLabel("result_comment");
-        $result_comment->setValue("What is the result/Why is there no result?");
+        //$result_comment->setValue("What is the result/Why is there no result?");
         $result->setAttrib('rows', '10');
         $result_comment->addValidators(array(
         	//new Zend_Validate_StringLength(array("max"=>"20"))
@@ -320,48 +321,10 @@ class Application_Form_Play extends Zend_Form
          *  Remove decorators
          */
         foreach($this->getElements() as $element) {
-            //$element->setDecorators(array("ViewHelper"));
+            $element->setDecorators(array("ViewHelper"));
         }
 
     }
-
-
-
-    protected function _crap() {
-
-
-    /*
-     * 	 Category Select 
-     */
-
-    $category = new Zend_Form_Element_Select("category");
-    $category->setLabel("category");
-    $category->setRequired();
-    //$category->setValue("");
-    $category->addValidators(array(
-        new Zend_Validate_Int(),
-        new Zend_Validate_StringLength(array("max" => "4"))
-    ));
-    $q = Doctrine_Query::create()
-            ->select("id_category, CONCAT(label) as label")
-            ->from("Category")
-            ->fetchArray();
-
-    $options = array();
-
-    $category->addMultiOption("", "");
-    foreach ($q as $v) {
-      $category->addMultiOption($v["id_category"], $v["label"]);
-    }
-
-    $this->addElement($category);
-    
-    
-    
-    
-    
-    
-  }
 
 
 }

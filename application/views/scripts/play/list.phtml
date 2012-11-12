@@ -73,6 +73,9 @@
         <td><a href="<?= $this->baseUrl();?>/play/list/selected_scrum/<?= $val['fk_id_scrum_item'];?>"><?= $val['ScrumItem']['label'];?></a></td>
         <td><?= $val['label'];?></td>
         <td><?= $val['started_on'];?></td>
+        
+        
+        <?php if($val['started_on']!== '0000-00-00 00:00:00'){ ;?>
         <td><?= $val['stopped_on'];?></td>
         <td><?= $val['stop_reason'];?></td>
         <td><?= $val['estimate_duration'];?></td>
@@ -84,6 +87,19 @@
         <td><?= $val['Category']['label'];?></td>
         <td><?= $val['Player']['name'];?></td>
         <td><?= $val['Team']['label'];?></td>
+        <?php }else{ ;?>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td><?= $val['Category']['label'];?></td>
+        <td><?= $val['Player']['name'];?></td>
+        <td><?= $val['Team']['label'];?></td>
+        <?php } ;?>
         <td><a href="<?= $this->baseUrl();?>/play/delete/id_play/<?= $val['id_play'];?>"><i class="icon-remove"></i></a></td>
       </tr>
 <?php 

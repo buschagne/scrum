@@ -39,6 +39,12 @@ class PlayController extends Zend_Controller_Action
 
         $values = $form->getValues();
         $model->fromArray($values);
+        if(empty($model->started_on))$model->started_on = null;
+        if(empty($model->stopped_on))$model->stopped_on = null;
+        if(empty($model->estimate_finish))$model->estimate_finish = null;
+        if(empty($model->deadline))$model->deadline = null;
+        if(empty($model->finished_on))$model->finished_on = null;
+        
         //Zend_Debug::dump($model->toArray());//exit;
         $model->save();
         $this->_redirect($this->redirecturl);
@@ -61,6 +67,11 @@ class PlayController extends Zend_Controller_Action
       if ($form->isValid($this->getRequest()->getPost())) {
 
         $model->setArray($form->getValues());
+        if(empty($model->started_on))$model->started_on = null;
+        if(empty($model->stopped_on))$model->stopped_on = null;
+        if(empty($model->estimate_finish))$model->estimate_finish = null;
+        if(empty($model->deadline))$model->deadline = null;
+        if(empty($model->finished_on))$model->finished_on = null;
         $model->save();
         $this->_redirect($this->redirecturl);
       }
