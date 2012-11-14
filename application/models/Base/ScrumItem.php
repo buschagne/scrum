@@ -13,6 +13,7 @@ Doctrine_Manager::getInstance()->bindComponent('ScrumItem', 'scrum');
  * @property timestamp $created_on
  * @property timestamp $removed_on
  * @property Doctrine_Collection $Play
+ * @property Doctrine_Collection $Shortplay
  * 
  * @package    ##PACKAGE##
  * @subpackage ##SUBPACKAGE##
@@ -71,6 +72,10 @@ abstract class Base_ScrumItem extends Doctrine_Record
     {
         parent::setUp();
         $this->hasMany('Play', array(
+             'local' => 'id_scrum_item',
+             'foreign' => 'fk_id_scrum_item'));
+
+        $this->hasMany('Shortplay', array(
              'local' => 'id_scrum_item',
              'foreign' => 'fk_id_scrum_item'));
     }

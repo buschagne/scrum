@@ -12,6 +12,12 @@
             <action>list</action>
             
         </play>
+        <shortplay>
+            <label>Shortplay!</label>
+            <controller>shortplay</controller>
+            <action>list</action>
+            
+        </shortplay>
         <configuration>
             <label>Configuration</label>
             <controller>player</controller>

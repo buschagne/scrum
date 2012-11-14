@@ -23,3 +23,15 @@ id_category:ID
 description;Description
 created_on;Created on ..
 removed_on;Removed on ..
+
+
+id_shortplay;ID
+description;Description
+not_started;Not Started
+started_on;Started
+done;Done
+impediment;Problem
+comment;Comment
+estimate_time;Estimated Time
+updated;Updated
+   

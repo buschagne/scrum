@@ -1,0 +1,109 @@
+<h2>Lets play! <?= $this->page->title; ?></h2>
+<?php 
+//Zend_Debug::dump($this->data);
+?>
+
+
+<div>
+  <span style="background-color:gainsboro;">&nbsp;Not Started</span>&nbsp;
+  <span style="background-color:whitesmoke;">&nbsp;Started</span>&nbsp;
+ 
+  <span style="background-color: lightcoral;">&nbsp;Problem</span>&nbsp;
+  <span style="background-color:lightgreen;">&nbsp;Completed</span>&nbsp;
+  
+  <br/>  
+</div>
+<table  id="datatable">
+  <thead>
+      <tr>
+         <?php
+    echo '<th>' . $this->translate("id_shortplay") . '</th>
+    <th>' . $this->translate("fk_id_scrum_item") . '</th>
+        <th>' . $this->translate("fk_id_category") . '</th>
+    <th>' . $this->translate("fk_id_player") . '</th>
+    <th>' . $this->translate("label") . '</th>
+        <th>' . $this->translate("description") . '</th>
+    <th>' . $this->translate("not_started") . '</th>
+    <th>' . $this->translate("started_on") . '</th>
+    <th>' . $this->translate("done") . '</th>
+    <th>' . $this->translate("impediment") . '</th>
+        <th>' . $this->translate("comment") . '</th>
+    <th>' . $this->translate("estimate_time") . '</th>
+    <th>' . $this->translate("updated") . '</th>
+   
+    <th></th>';?> 
+          
+      </tr>
+  </thead>
+  <tbody>
+
+    <?php
+    
+    
+    
+    
+    foreach ($this->data as $key => $val) {
+ 
+        $style = "background-color:gray;";
+             
+      if($val['fk_id_scrum_item'] == $this->selected_scrum || $this->selected_scrum == null){
+      if($val['fk_id_category'] == $this->selected_category || $this->selected_category == null){
+      if($val['fk_id_player'] == $this->selected_player || $this->selected_player == null){
+      
+      
+      if($val['started_on']== '0'){
+      
+        $style = "background-color:gainsboro;";
+      }else{
+        $style = "background-color:whitesmoke;";
+      }
+      
+      if($val['impediment']== '0'){
+      }else{
+        $style = "background-color:lightcoral;";
+      }
+      
+      if($val['done']== '0'){
+      }else{
+        $style = "background-color:lightgreen;";
+      }
+      
+      
+      ;?>
+    
+      <tr>
+        <td><a href="<?= $this->baseUrl();?>/shortplay/update/id_shortplay/<?= $val['id_shortplay'];?>"><i class="icon-wrench"></i></a></td>
+        <td><a href="<?= $this->baseUrl();?>/shortplay/list/selected_scrum/<?= $val['fk_id_scrum_item'];?>"><?= $val['ScrumItem']['label'];?></a></td>
+        <td><a href="<?= $this->baseUrl();?>/shortplay/list/selected_category/<?= $val['fk_id_category'];?>"><?= $val['Category']['label'];?></a></td>
+        <td><a href="<?= $this->baseUrl();?>/shortplay/list/selected_player/<?= $val['fk_id_player'];?>"><?= $val['Player']['name'];?></a></td>
+        <td><?= $val['label'];?></td>
+        <td><?= $val['description'];?></td>
+        <td style="<?= $style ;?>"><?= $val['not_started'];?></td>
+        <td style="<?= $style ;?>"><?= $val['started_on'];?></td>
+        <td style="<?= $style ;?>"><?= $val['done'];?></td>
+        <td style="<?= $style ;?>"><?= $val['impediment'];?></td>
+        <td><?= $val['comment'];?></td>
+        <td><?= $val['estimate_time'];?></td>
+        <td><?= $val['updated'];?></td>
+        
+        
+        
+       
+        <td><a href="<?= $this->baseUrl();?>/shortplay/delete/id_shortplay/<?= $val['id_shortplay'];?>"><i class="icon-remove"></i></a></td>
+      </tr>
+<?php 
+      
+      
+      }}}}
+
+
+    ;
+    ?>
+  </tbody>
+  <tfoot>
+    <tr>
+      <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+    </tr>
+  </tfoot>
+</table>
+<a href="<?= $this->baseUrl(); ?>/shortplay/add">Add</a>

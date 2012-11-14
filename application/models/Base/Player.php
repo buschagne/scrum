@@ -10,6 +10,7 @@ Doctrine_Manager::getInstance()->bindComponent('Player', 'scrum');
  * @property integer $id_player
  * @property string $name
  * @property Doctrine_Collection $Play
+ * @property Doctrine_Collection $Shortplay
  * @property Doctrine_Collection $TeamHasPlayer
  * 
  * @package    ##PACKAGE##
@@ -45,6 +46,10 @@ abstract class Base_Player extends Doctrine_Record
     {
         parent::setUp();
         $this->hasMany('Play', array(
+             'local' => 'id_player',
+             'foreign' => 'fk_id_player'));
+
+        $this->hasMany('Shortplay', array(
              'local' => 'id_player',
              'foreign' => 'fk_id_player'));
 

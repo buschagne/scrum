@@ -10,6 +10,7 @@ Doctrine_Manager::getInstance()->bindComponent('Category', 'scrum');
  * @property integer $id_category
  * @property string $label
  * @property Doctrine_Collection $Play
+ * @property Doctrine_Collection $Shortplay
  * 
  * @package    ##PACKAGE##
  * @subpackage ##SUBPACKAGE##
@@ -44,6 +45,10 @@ abstract class Base_Category extends Doctrine_Record
     {
         parent::setUp();
         $this->hasMany('Play', array(
+             'local' => 'id_category',
+             'foreign' => 'fk_id_category'));
+
+        $this->hasMany('Shortplay', array(
              'local' => 'id_category',
              'foreign' => 'fk_id_category'));
     }
