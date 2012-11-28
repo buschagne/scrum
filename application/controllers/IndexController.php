@@ -10,7 +10,7 @@ class IndexController extends Zend_Controller_Action
 
     public function indexAction()
     {
-        $this->view->welcome = "Welcome to Bewan Scrum";
+        $this->view->welcome = "Welcome to Scrum";
         $scrum = new stdClass();
         $scrum->url = "/scrum/list";
         $scrum->label = array(); 
