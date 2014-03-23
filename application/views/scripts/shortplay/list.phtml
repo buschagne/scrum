@@ -1,4 +1,4 @@
-<h2>Lets play! <?= $this->page->title; ?></h2>
+<h2>Lets play! <?php echo $this->page->title; ?></h2>
 <?php 
 //Zend_Debug::dump($this->data);
 ?>
@@ -72,24 +72,24 @@
       ;?>
     
       <tr>
-        <td><a href="<?= $this->baseUrl();?>/shortplay/update/id_shortplay/<?= $val['id_shortplay'];?>"><i class="icon-wrench"></i></a></td>
-        <td><a href="<?= $this->baseUrl();?>/shortplay/list/selected_scrum/<?= $val['fk_id_scrum_item'];?>"><?= $val['ScrumItem']['label'];?></a></td>
-        <td><a href="<?= $this->baseUrl();?>/shortplay/list/selected_category/<?= $val['fk_id_category'];?>"><?= $val['Category']['label'];?></a></td>
-        <td><a href="<?= $this->baseUrl();?>/shortplay/list/selected_player/<?= $val['fk_id_player'];?>"><?= $val['Player']['name'];?></a></td>
-        <td><?= $val['label'];?></td>
-        <td><?= $val['description'];?></td>
-        <td style="<?= $style ;?>"><?= $val['not_started'];?></td>
-        <td style="<?= $style ;?>"><?= $val['started_on'];?></td>
-        <td style="<?= $style ;?>"><?= $val['done'];?></td>
-        <td style="<?= $style ;?>"><?= $val['impediment'];?></td>
-        <td><?= $val['comment'];?></td>
-        <td><?= $val['estimate_time'];?></td>
-        <td><?= $val['updated'];?></td>
+        <td><a href="<?php echo $this->baseUrl();?>/shortplay/update/id_shortplay/<?php echo $val['id_shortplay'];?>"><i class="icon-wrench"></i></a></td>
+        <td><a href="<?php echo $this->baseUrl();?>/shortplay/list/selected_scrum/<?php echo $val['fk_id_scrum_item'];?>"><?php echo $val['ScrumItem']['label'];?></a></td>
+        <td><a href="<?php echo $this->baseUrl();?>/shortplay/list/selected_category/<?php echo $val['fk_id_category'];?>"><?php echo $val['Category']['label'];?></a></td>
+        <td><a href="<?php echo $this->baseUrl();?>/shortplay/list/selected_player/<?php echo $val['fk_id_player'];?>"><?php echo $val['Player']['name'];?></a></td>
+        <td><?php echo $val['label'];?></td>
+        <td><?php echo $val['description'];?></td>
+        <td style="<?php echo $style ;?>"><?php echo $val['not_started'];?></td>
+        <td style="<?php echo $style ;?>"><?php echo $val['started_on'];?></td>
+        <td style="<?php echo $style ;?>"><?php echo $val['done'];?></td>
+        <td style="<?php echo $style ;?>"><?php echo $val['impediment'];?></td>
+        <td><?php echo $val['comment'];?></td>
+        <td><?php echo $val['estimate_time'];?></td>
+        <td><?php echo $val['updated'];?></td>
         
         
         
        
-        <td><a href="<?= $this->baseUrl();?>/shortplay/delete/id_shortplay/<?= $val['id_shortplay'];?>"><i class="icon-remove"></i></a></td>
+        <td><a href="<?php echo $this->baseUrl();?>/shortplay/delete/id_shortplay/<?php echo $val['id_shortplay'];?>"><i class="icon-remove"></i></a></td>
       </tr>
 <?php 
       
@@ -106,4 +106,4 @@
     </tr>
   </tfoot>
 </table>
-<a href="<?= $this->baseUrl(); ?>/shortplay/add">Add</a>
+<a href="<?php echo $this->baseUrl(); ?>/shortplay/add">Add</a>

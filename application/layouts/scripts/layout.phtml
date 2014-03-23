@@ -1,16 +1,16 @@
 <?php echo $this->doctype() . "\n"; ?>
 <html>
     <head>
-        <link href="<?= $this->baseUrl() ?>/css/main.css" rel="stylesheet">
-        <link href="<?= $this->baseUrl() ?>/css/global.css" rel="stylesheet">
-        <link href="<?= $this->baseUrl() ?>/css/jquery-ui-1.8.18.custom.css" rel="stylesheet">
-        <link href="<?= $this->baseUrl() ?>/twitter-bootstrap/bootstrap.css" rel="stylesheet">
-        <link href="<?= $this->baseUrl() ?>/css/flexigrid.pack.css" rel="stylesheet">
-        <link href="<?= $this->baseUrl() ?>/js/jquery.fancybox.css?v=2.1.0" media="screen" rel="stylesheet" type="text/css" />
-        <link href="<?= $this->baseUrl() ?>/css/forms-styling.css" rel="stylesheet">
+        <link href="<?php echo $this->baseUrl() ?>/css/main.css" rel="stylesheet">
+        <link href="<?php echo $this->baseUrl() ?>/css/global.css" rel="stylesheet">
+        <link href="<?php echo $this->baseUrl() ?>/css/jquery-ui-1.8.18.custom.css" rel="stylesheet">
+        <link href="<?php echo $this->baseUrl() ?>/twitter-bootstrap/bootstrap.css" rel="stylesheet">
+        <link href="<?php echo $this->baseUrl() ?>/css/flexigrid.pack.css" rel="stylesheet">
+        <link href="<?php echo $this->baseUrl() ?>/js/jquery.fancybox.css?v=2.1.0" media="screen" rel="stylesheet" type="text/css" />
+        <link href="<?php echo $this->baseUrl() ?>/css/forms-styling.css" rel="stylesheet">
 
-        <script type="text/javascript" src="<?= $this->baseUrl() ?>/js/jquery.min.js"></script>
-        <script type="text/javascript" src="<?= $this->baseUrl() ?>/js/jquery-ui-1.8.18.custom.min.js"></script>
+        <script type="text/javascript" src="<?php echo $this->baseUrl() ?>/js/jquery.min.js"></script>
+        <script type="text/javascript" src="<?php echo $this->baseUrl() ?>/js/jquery-ui-1.8.18.custom.min.js"></script>
         
         <?php $this->headScript()->appendFile($this->baseUrl() . "/js/jquery.fancybox.js?v=2.1.0"); ?>
         <?php $this->headScript()->appendFile($this->baseUrl() . "/js/jquery.rightClick.js"); ?>
@@ -47,7 +47,7 @@
                             </a>
                         </li>
                         
-                        <li class="user-action"><a href="<?= $this->baseUrl();?>/login/index/logout"><img src="<?= $this->baseUrl()?>/img/off_small.png"></a></li>
+                        <li class="user-action"><a href="<?php echo $this->baseUrl();?>/login/index/logout"><img src="<?php echo $this->baseUrl()?>/img/off_small.png"></a></li>
                         
                     </ul>
                 </div>

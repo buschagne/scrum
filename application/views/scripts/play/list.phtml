@@ -1,4 +1,4 @@
-<h2>Lets play! <?= $this->page->title; ?></h2>
+<h2>Lets play! <?php echo $this->page->title; ?></h2>
 <?php 
 //Zend_Debug::dump($this->selected_scrum);
 ?>
@@ -68,25 +68,25 @@
       
       ;?>
     
-      <tr style="<?= $style ?>">
-        <td><a href="<?= $this->baseUrl();?>/play/update/id_play/<?= $val['id_play'];?>"><i class="icon-wrench"></i></a></td>
-        <td><a href="<?= $this->baseUrl();?>/play/list/selected_scrum/<?= $val['fk_id_scrum_item'];?>"><?= $val['ScrumItem']['label'];?></a></td>
-        <td><?= $val['label'];?></td>
-        <td><?= $val['started_on'];?></td>
+      <tr style="<?php echo $style ?>">
+        <td><a href="<?php echo $this->baseUrl();?>/play/update/id_play/<?php echo $val['id_play'];?>"><i class="icon-wrench"></i></a></td>
+        <td><a href="<?php echo $this->baseUrl();?>/play/list/selected_scrum/<?php echo $val['fk_id_scrum_item'];?>"><?php echo $val['ScrumItem']['label'];?></a></td>
+        <td><?php echo $val['label'];?></td>
+        <td><?php echo $val['started_on'];?></td>
         
         
         <?php if($val['started_on']!== '0000-00-00 00:00:00'){ ;?>
-        <td><?= $val['stopped_on'];?></td>
-        <td><?= $val['stop_reason'];?></td>
-        <td><?= $val['estimate_duration'];?></td>
-        <td><?= $val['estimate_finish'];?></td>
-        <td><?= $val['deadline'];?></td>
-        <td><?= $val['finished_on'];?></td>
-        <td><?= $val['result'];?></td>
-        <td><?= $val['result_comment'];?></td>
-        <td><?= $val['Category']['label'];?></td>
-        <td><?= $val['Player']['name'];?></td>
-        <td><?= $val['Team']['label'];?></td>
+        <td><?php echo $val['stopped_on'];?></td>
+        <td><?php echo $val['stop_reason'];?></td>
+        <td><?php echo $val['estimate_duration'];?></td>
+        <td><?php echo $val['estimate_finish'];?></td>
+        <td><?php echo $val['deadline'];?></td>
+        <td><?php echo $val['finished_on'];?></td>
+        <td><?php echo $val['result'];?></td>
+        <td><?php echo $val['result_comment'];?></td>
+        <td><?php echo $val['Category']['label'];?></td>
+        <td><?php echo $val['Player']['name'];?></td>
+        <td><?php echo $val['Team']['label'];?></td>
         <?php }else{ ;?>
         <td></td>
         <td></td>
@@ -96,11 +96,11 @@
         <td></td>
         <td></td>
         <td></td>
-        <td><?= $val['Category']['label'];?></td>
-        <td><?= $val['Player']['name'];?></td>
-        <td><?= $val['Team']['label'];?></td>
+        <td><?php echo $val['Category']['label'];?></td>
+        <td><?php echo $val['Player']['name'];?></td>
+        <td><?php echo $val['Team']['label'];?></td>
         <?php } ;?>
-        <td><a href="<?= $this->baseUrl();?>/play/delete/id_play/<?= $val['id_play'];?>"><i class="icon-remove"></i></a></td>
+        <td><a href="<?php echo $this->baseUrl();?>/play/delete/id_play/<?php echo $val['id_play'];?>"><i class="icon-remove"></i></a></td>
       </tr>
 <?php 
       }
@@ -117,4 +117,4 @@
     </tr>
   </tfoot>
 </table>
-<a href="<?= $this->baseUrl(); ?>/play/add">Add</a>
+<a href="<?php echo $this->baseUrl(); ?>/play/add">Add</a>

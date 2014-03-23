@@ -1,4 +1,4 @@
-<h2><?= $this->page->title;?></h2>
+<h2><?php echo $this->page->title;?></h2>
 <?php //Zend_Debug::dump($this->data);?>
 <table class="table table-condensed">
 <?php
@@ -8,4 +8,4 @@ foreach ($this->data as $key => $val){
 }
 ;?>
 </table>
-<a href="<?= $this->baseUrl();?>/category/add">Add</a>
+<a href="<?php echo $this->baseUrl();?>/category/add">Add</a>

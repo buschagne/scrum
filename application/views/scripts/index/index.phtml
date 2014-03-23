@@ -1,12 +1,12 @@
-<h2><?= $this->welcome ;?></h2>
+<h2><?php echo $this->welcome ;?></h2>
 
 
 <h4>
-    <?= $this->scrumurl->label[0] ;?>
-    <?= $this->scrumurl->label[1] ;?>
-    <?= $this->scrumurl->label[2] ;?>
+    <?php echo $this->scrumurl->label[0] ;?>
+    <?php echo $this->scrumurl->label[1] ;?>
+    <?php echo $this->scrumurl->label[2] ;?>
     
     
 </h4>
 
-<h3><a href="<?= $this->baseUrl().$this->scrumurl->url ;?>"><?= $this->scrumurl->label[3] ;?></a></h3>
+<h3><a href="<?= $this->baseUrl().$this->scrumurl->url ;?>"><?php echo $this->scrumurl->label[3] ;?></a></h3>

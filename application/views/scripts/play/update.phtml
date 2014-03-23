@@ -15,22 +15,22 @@ textarea{
 
 
 </style>
-<h2><?= $this->translate($this->form->getName()); ?></h2>
+<h2><?php echo $this->translate($this->form->getName()); ?></h2>
 
-<form action="<?= $this->form->getAction() ?>" method="<?= $this->form->getMethod() ?>" class="form-horizontal" id="form-add-play">
+<form action="<?php echo $this->form->getAction() ?>" method="<?php echo $this->form->getMethod() ?>" class="form-horizontal" id="form-add-play">
 
     <?php $messages = $this->form->getMessages(); ?>
     <div class="control-group">
         <div class="controls">
-            <?= $this->form->fk_id_scrum_item; ?>
+            <?php echo $this->form->fk_id_scrum_item; ?>
         </div>
     </div>
 
         <div class="control-group form-element-inline">
     
-        <label class="control-label"><?= $this->form->label->getLabel(); ?></label>
+        <label class="control-label"><?php echo $this->form->label->getLabel(); ?></label>
         <div class="controls">
-            <?= $this->form->label; ?>
+            <?php echo $this->form->label; ?>
             <?php
             if (!empty($messages["label"]))
                 foreach ($messages["label"] as $mess){
@@ -41,9 +41,9 @@ textarea{
     </div>
 
         <div class="control-group  form-element-inline">
-        <label class="control-label"><?= $this->form->started_on->getLabel(); ?></label>
+        <label class="control-label"><?php echo $this->form->started_on->getLabel(); ?></label>
         <div class="controls">
-            <?= $this->form->started_on; ?>
+            <?php echo $this->form->started_on; ?>
             <?php
             if (!empty($messages["started_on"]))
                 foreach ($messages["started_on"] as $mess){
@@ -54,9 +54,9 @@ textarea{
         </div>
 
         <div class="control-group  form-element-inline">
-        <label class="control-label"><?= $this->form->stopped_on->getLabel(); ?></label>
+        <label class="control-label"><?php echo $this->form->stopped_on->getLabel(); ?></label>
             <div class="controls">
-            <?= $this->form->stopped_on; ?>
+            <?php echo $this->form->stopped_on; ?>
             <?php
             if (!empty($messages["stopped_on"]))
                 foreach ($messages["stopped_on"] as $mess){
@@ -67,9 +67,9 @@ textarea{
         </div>
 
         <div class="control-group">
-        <label class="control-label"><?= $this->form->stop_reason->getLabel(); ?></label>
+        <label class="control-label"><?php echo $this->form->stop_reason->getLabel(); ?></label>
             <div class="controls">
-            <?= $this->form->stop_reason; ?>
+            <?php echo $this->form->stop_reason; ?>
             <?php
             if (!empty($messages["stop_reason"]))
                 foreach ($messages["stop_reason"] as $mess){
@@ -80,9 +80,9 @@ textarea{
         </div>
 
         <div class="control-group  form-element-inline">
-        <label class="control-label"><?= $this->form->estimate_duration->getLabel(); ?></label>
+        <label class="control-label"><?php echo $this->form->estimate_duration->getLabel(); ?></label>
             <div class="controls">
-            <?= $this->form->estimate_duration; ?>
+            <?php echo $this->form->estimate_duration; ?>
             <?php
             if (!empty($messages["estimate_duration"]))
                 foreach ($messages["estimate_duration"] as $mess){
@@ -93,9 +93,9 @@ textarea{
         </div>
     
         <div class="control-group  form-element-inline">
-        <label class="control-label"><?= $this->form->estimate_finish->getLabel(); ?></label>
+        <label class="control-label"><?php echo $this->form->estimate_finish->getLabel(); ?></label>
             <div class="controls">
-            <?= $this->form->estimate_finish; ?>
+            <?php echo $this->form->estimate_finish; ?>
             <?php
             if (!empty($messages["estimate_finish"]))
                 foreach ($messages["estimate_finish"] as $mess){
@@ -106,9 +106,9 @@ textarea{
         </div>
 
         <div class="control-group form-element-inline">
-        <label class="control-label"><?= $this->form->deadline->getLabel(); ?></label>
+        <label class="control-label"><?php echo $this->form->deadline->getLabel(); ?></label>
             <div class="controls">
-            <?= $this->form->deadline; ?>
+            <?php echo $this->form->deadline; ?>
             <?php
             if (!empty($messages["deadline"]))
                 foreach ($messages["deadline"] as $mess){
@@ -119,9 +119,9 @@ textarea{
         </div>
 
         <div class="control-group  form-element-inline">
-        <label class="control-label"><?= $this->form->finished_on->getLabel(); ?></label>
+        <label class="control-label"><?php echo $this->form->finished_on->getLabel(); ?></label>
             <div class="controls">
-            <?= $this->form->finished_on; ?>
+            <?php echo $this->form->finished_on; ?>
             <?php
             if (!empty($messages["finished_on"]))
                 foreach ($messages["finished_on"] as $mess){
@@ -132,9 +132,9 @@ textarea{
         </div>
 
         <div class="control-group  form-element-inline">
-        <label class="control-label"><?= $this->form->result->getLabel(); ?></label>
+        <label class="control-label"><?php echo $this->form->result->getLabel(); ?></label>
             <div class="controls">
-            <?= $this->form->result; ?>
+            <?php echo $this->form->result; ?>
             <?php
             if (!empty($messages["result"]))
                 foreach ($messages["result"] as $mess){
@@ -145,9 +145,9 @@ textarea{
         </div>
 
         <div class="control-group">
-        <label class="control-label"><?= $this->form->result_comment->getLabel(); ?></label>
+        <label class="control-label"><?php echo $this->form->result_comment->getLabel(); ?></label>
             <div class="controls">
-            <?= $this->form->result_comment; ?>
+            <?php echo $this->form->result_comment; ?>
             <?php
             if (!empty($messages["result_comment"]))
                 foreach ($messages["result_comment"] as $mess){
@@ -159,19 +159,19 @@ textarea{
     
         <div class="control-group  form-element-inline">
         <div class="controls">
-            <?= $this->form->fk_id_category; ?>
+            <?php echo $this->form->fk_id_category; ?>
         </div>
     </div>
 
     <div class="control-group  form-element-inline">
         <div class="controls">
-            <?= $this->form->fk_id_player; ?>
+            <?php echo $this->form->fk_id_player; ?>
         </div>
     </div>
     
     <div class="control-group  form-element-inline">
         <div class="controls">
-            <?= $this->form->fk_id_team; ?>
+            <?php echo $this->form->fk_id_team; ?>
         </div>
     </div>
 
